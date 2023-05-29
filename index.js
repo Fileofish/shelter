@@ -115,6 +115,23 @@ document.getElementById('burgerMenuButton').addEventListener('click', (event) =>
 document.querySelector('body').addEventListener('click', (event) => {
     if (event.target === burgerMenuButton) return;
     if (event.target === navigation) return;
+    if (event.target === document.querySelector("#slideMainPets1")) return;
+    if (event.target === document.querySelector("#slideImg1")) return;
+    if (event.target === document.querySelector("#slideMainPets1 > button")) return;
+    if (event.target === document.querySelector("#slideMainPets2")) return;
+    if (event.target === document.querySelector("#slideImg2")) return;
+    if (event.target === document.querySelector("#slideMainPets2 > button")) return;
+    if (event.target === document.querySelector("#slideMainPets3")) return;
+    if (event.target === document.querySelector("#slideImg3")) return;
+    if (event.target === document.querySelector("#slideMainPets3 > button")) return;
+    if (event.target === document.querySelector("#popup")) return;
+    if (event.target === document.querySelector("#popup > div.wrapper > div > h3")) return;
+    if (event.target === document.querySelector("#popup > div.wrapper > div > h4")) return;
+    if (event.target === document.querySelector("#popup > div.wrapper")) return;
+    if (event.target === document.querySelector("#popup > div.wrapper > div")) return;
+    if (event.target === document.querySelector("#petDescription")) return;
+    if (event.target === document.querySelector("#popup > div.wrapper > img")) return;
+    document.querySelector("#popup").classList.remove('active');
     document.getElementById('burgerMenuButton').classList.remove('active');
     document.getElementById('navigation').classList.remove('active');
     document.getElementById('burgerMenuButtonClose').classList.remove('active');
@@ -176,3 +193,51 @@ document.getElementById('arrowLeft').addEventListener('click', () => {
   showPreviousSliders();
 })
 showNextSliders();
+
+// popup
+document.querySelector("#slideMainPets1").addEventListener('click', (event) => {
+  document.querySelector("#popup").classList.add('active');
+  document.querySelector("#background").classList.add('active');
+  document.querySelector("body").style.overflow = 'hidden';
+  document.querySelector("#popup > div.wrapper > img").src = petBase[currentSlides[0]]["img"];
+  document.querySelector("#popup > div.wrapper > div > h3").innerHTML = petBase[currentSlides[0]]["name"];
+  document.querySelector("#popup > div.wrapper > div > h4").innerHTML = `${petBase[currentSlides[0]]["type"]} - ${petBase[currentSlides[0]]["breed"]}`;
+  document.querySelector("#petDescription").innerHTML = petBase[currentSlides[0]]["description"];
+  document.querySelector("#petAge").innerHTML = petBase[currentSlides[0]]["age"];
+  document.querySelector("#petInoculations").innerHTML = petBase[currentSlides[0]]["inoculations"];
+  document.querySelector("#petDiseases").innerHTML = petBase[currentSlides[0]]["diseases"];
+  document.querySelector("#petParasites").innerHTML = petBase[currentSlides[0]]["parasites"];
+});
+document.querySelector("#slideMainPets2").addEventListener('click', (event) => {
+  document.querySelector("#popup").classList.add('active');
+  document.querySelector("#background").classList.add('active');
+  document.querySelector("body").style.overflow = 'hidden';
+  document.querySelector("#popup > div.wrapper > img").src = petBase[currentSlides[1]]["img"];
+  document.querySelector("#popup > div.wrapper > div > h3").innerHTML = petBase[currentSlides[1]]["name"];
+  document.querySelector("#popup > div.wrapper > div > h4").innerHTML = `${petBase[currentSlides[1]]["type"]} - ${petBase[currentSlides[1]]["breed"]}`;
+  document.querySelector("#petDescription").innerHTML = petBase[currentSlides[1]]["description"];
+  document.querySelector("#petAge").innerHTML = petBase[currentSlides[1]]["age"];
+  document.querySelector("#petInoculations").innerHTML = petBase[currentSlides[1]]["inoculations"];
+  document.querySelector("#petDiseases").innerHTML = petBase[currentSlides[1]]["diseases"];
+  document.querySelector("#petParasites").innerHTML = petBase[currentSlides[1]]["parasites"];
+});
+document.querySelector("#slideMainPets3").addEventListener('click', (event) => {
+  document.querySelector("#popup").classList.add('active');
+  document.querySelector("#background").classList.add('active');
+  document.querySelector("body").style.overflow = 'hidden';
+  document.querySelector("#popup > div.wrapper > img").src = petBase[currentSlides[2]]["img"];
+  document.querySelector("#popup > div.wrapper > div > h3").innerHTML = petBase[currentSlides[2]]["name"];
+  document.querySelector("#popup > div.wrapper > div > h4").innerHTML = `${petBase[currentSlides[2]]["type"]} - ${petBase[currentSlides[2]]["breed"]}`;
+  document.querySelector("#petDescription").innerHTML = petBase[currentSlides[2]]["description"];
+  document.querySelector("#petAge").innerHTML = petBase[currentSlides[2]]["age"];
+  document.querySelector("#petInoculations").innerHTML = petBase[currentSlides[2]]["inoculations"];
+  document.querySelector("#petDiseases").innerHTML = petBase[currentSlides[2]]["diseases"];
+  document.querySelector("#petParasites").innerHTML = petBase[currentSlides[2]]["parasites"];
+});
+
+console.log(`Общий балл: 110/110
+1.Реализация burger menu на обеих страницах: +26
+2.Реализация слайдера-карусели на странице Main: +36
+3.Реализация пагинации на странице Pets: +36
+4.Реализация попап на обеих страницах: +12
+`)

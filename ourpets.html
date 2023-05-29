@@ -37,62 +37,79 @@
                 <div class="wrapper">
                     <div class="slider">
                         <div class="slide--wrapper">
-                            <div class="slide slide1">
-                                <img src="assets/images/our-friends/1.png" alt="slide1-img1">
-                                <p>Katrine</p>
+                            <div class="slide slide1" id="sladePet1">
+                                <img src="" alt="slide1-img1">
+                                <p class="slade-name"></p>
                                 <button>Learn more</button>
                             </div>
-                            <div class="slide slide2">
-                                <img src="assets/images/our-friends/2.png" alt="slide1-img2">
-                                <p>Jennifer</p>
-                                <button>Learn more</button>
-                            </div>
-                        </div>
-                        <div class="slide--wrapper">
-                            <div class="slide slide3">
-                                <img src="assets/images/our-friends/3.png" alt="slide1-img3">
-                                <p>Woody</p>
-                                <button>Learn more</button>
-                            </div>
-                            <div class="slide slide4">
-                                <img src="assets/images/our-friends/4.png" alt="slide2-img1">
-                                <p>Sophia</p>
+                            <div class="slide slide2" id="sladePet2">
+                                <img src="" alt="slide1-img2">
+                                <p class="slade-name"></p>
                                 <button>Learn more</button>
                             </div>
                         </div>
                         <div class="slide--wrapper">
-                            <div class="slide slide5">
-                                <img src="assets/images/our-friends/5.png" alt="slide2-img2">
-                                <p>Timmy</p>
+                            <div class="slide slide3" id="sladePet3">
+                                <img src="" alt="slide1-img3">
+                                <p class="slade-name"></p>
                                 <button>Learn more</button>
                             </div>
-                            <div class="slide slide6">
-                                <img src="assets/images/our-friends/6.png" alt="slide2-img3">
-                                <p>Charly</p>
+                            <div class="slide slide4" id="sladePet4">
+                                <img src="" alt="slide2-img1">
+                                <p class="slade-name"></p>
                                 <button>Learn more</button>
                             </div>
                         </div>
                         <div class="slide--wrapper">
-                            <div class="slide slide7">
-                                <img src="assets/images/our-friends/7.png" alt="slide3-img1">
-                                <p>Scarlett</p>
+                            <div class="slide slide5" id="sladePet5">
+                                <img src="" alt="slide2-img2">
+                                <p class="slade-name"></p>
                                 <button>Learn more</button>
                             </div>
-                            <div class="slide slide8">
-                                <img src="assets/images/our-friends/8.png" alt="slide3-img2">
-                                <p>Freddie</p>
+                            <div class="slide slide6" id="sladePet6">
+                                <img src="" alt="slide2-img3">
+                                <p class="slade-name"></p>
+                                <button>Learn more</button>
+                            </div>
+                        </div>
+                        <div class="slide--wrapper">
+                            <div class="slide slide7" id="sladePet7">
+                                <img src="" alt="slide3-img1">
+                                <p class="slade-name"></p>
+                                <button>Learn more</button>
+                            </div>
+                            <div class="slide slide8" id="sladePet8">
+                                <img src="" alt="slide3-img2">
+                                <p class="slade-name"></p>
                                 <button>Learn more</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="slide-bar">
-                    <div class="slider-bar--button double-arrow-left disable"><p>&#60;&#60;</p></div>
-                    <div class="slider-bar--button double-arrow-left disable"><p>&#60;</p></div>
-                    <div class="slider-bar--button active"><p>1</p></div>
-                    <div class="slider-bar--button double-arrow-right"><p>></p></div>
-                    <div class="slider-bar--button double-arrow-right"><p>>></p></div>
+                    <div class="slider-bar--button disable" id="doubleArrowLeft"><p>&#60;&#60;</p></div>
+                    <div class="slider-bar--button disable" id="arrowLeft"><p>&#60;</p></div>
+                    <div class="slider-bar--button active"><p id="sliderNum">1</p></div>
+                    <div class="slider-bar--button" id="arrowRight"><p>></p></div>
+                    <div class="slider-bar--button" id="doubleArrowRight"><p>>></p></div>
                 </div>
+            </div>
+            <div class="popup" id="popup">
+                <div class="wrapper">
+                    <img src="" alt="img-pet">
+                    <div class="content">
+                        <h3></h3>
+                        <h4></h4>
+                        <p id="petDescription"></p>
+                        <ul>
+                            <li><span><b>Age: </b><span id="petAge"></span></span></li>
+                            <li><span><b>Inoculations: </b><span id="petInoculations"></span></li>
+                            <li><span><b>Diseases: </b><span id="petDiseases"></span></span></span></li>
+                            <li><span><b>Parasites: </b><span id="petParasites"></span></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="popup-cross" id="popupCross"><p>✖</p></div>
             </div>
         </section>
     </main>
@@ -119,6 +136,6 @@
             <div class="footer-puppy--img"><img src="assets/images/footer/footer-puppy.png" alt="footer-puppy--img"></div>
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="ourpets.js"></script>
 </body>
 </html>
